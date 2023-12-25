@@ -1,0 +1,13 @@
+[
+    {
+        "process_name": "sdapi",
+        "process_wasm_path": "/sdapi.wasm",
+        "on_exit": "Restart",
+        "request_networking": true,
+        "request_messaging": [
+            "net:sys:uqbar"
+        ],
+        "grant_messaging": [],
+        "public": true
+    }
+]
