@@ -1,10 +1,8 @@
-use anyhow::{self};
 use rand::seq::SliceRandom;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use uqbar_process_lib::{
-    await_message, call_init, get_payload, http, print_to_terminal, Address, Message, Payload,
-    ProcessId, Request, Response,
+    await_message, call_init, http, print_to_terminal, Address, Message,
 };
 
 // TODO: replace with VFS reads inside init()
@@ -37,7 +35,7 @@ wit_bindgen::generate!({
 
 call_init!(init);
 
-fn init(our: Address) {
+fn init(_our: Address) {
     print_to_terminal(0, "SteelyDanAPI: online");
 
     // parse files
@@ -73,7 +71,7 @@ fn init(our: Address) {
                         "text/plain".to_string(),
                     )])),
                     songs.choose(seed).unwrap().as_bytes().to_vec(),
-                );
+                ).unwrap();
             }
             "lyric" => {
                 // select random album, random song, then random lyric snippet
@@ -93,14 +91,14 @@ fn init(our: Address) {
                         lyric: lyric.to_vec(),
                     })
                     .unwrap(),
-                );
+                ).unwrap();
             }
             _ => {
                 http::send_response(
                     http::StatusCode::NOT_FOUND,
                     None,
                     "404 Not Found".as_bytes().to_vec(),
-                );
+                ).unwrap();
             }
         }
     }
