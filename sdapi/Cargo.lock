@@ -232,6 +232,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "bincode",
+ "rand",
  "serde",
  "serde_json",
  "uqbar_process_lib",
