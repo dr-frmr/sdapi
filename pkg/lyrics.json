@@ -3,8 +3,9 @@
         "album": "Can't Buy A Thrill",
         "year": 1972,
         "songs": [
-            {
-                "Do It Again": [
+            [
+                "Do It Again",
+                [
                     [
                         "In the mornin you go gunnin'",
                         "For the man who stole your water",
@@ -47,9 +48,10 @@
                         "You must put them on the table"
                     ]
                 ]
-            },
-            {
-                "Dirty Work": [
+            ],
+            [
+                "Dirty Work",
+                [
                     [
                         "Times are hard",
                         "You're afraid to pay the fee",
@@ -81,9 +83,10 @@
                         "And I stay here just the same"
                     ]
                 ]
-            },
-            {
-                "Kings": [
+            ],
+            [
+                "Kings",
+                [
                     [
                         "Now they lay his body down",
                         "Sad old men who run this town"
@@ -113,9 +116,10 @@
                         "To the end of the line"
                     ]
                 ]
-            },
-            {
-                "Midnite Cruiser": [
+            ],
+            [
+                "Midnite Cruiser",
+                [
                     [
                         "Felonious, my old friend",
                         "Step on in and let me shake your hand",
@@ -147,9 +151,10 @@
                         "Drive me to Harlem or somewhere the same"
                     ]
                 ]
-            },
-            {
-                "Only A Fool Would Say That": [
+            ],
+            [
+                "Only A Fool Would Say That",
+                [
                     [
                         "A world become one",
                         "Of salads and sun",
@@ -199,9 +204,10 @@
                         "Then you realize"
                     ]
                 ]
-            },
-            {
-                "Reelin' In The Years": [
+            ],
+            [
+                "Reelin' In The Years",
+                [
                     [
                         "Your everlasting summer",
                         "You can see it fading fast",
@@ -245,9 +251,10 @@
                         "I can't understand"
                     ]
                 ]
-            },
-            {
-                "Fire In The Hole": [
+            ],
+            [
+                "Fire In The Hole",
+                [
                     [
                         "I decline",
                         "To walk the line",
@@ -286,9 +293,10 @@
                         "There's no way left to turn"
                     ]
                 ]
-            },
-            {
-                "Brooklyn (Owes The Charmer Under Me)": [
+            ],
+            [
+                "Brooklyn (Owes The Charmer Under Me)",
+                [
                     [
                         "A race of angels",
                         "Bound with one another",
@@ -319,9 +327,10 @@
                         "Under me"
                     ]
                 ]
-            },
-            {
-                "Change Of The Guard": [
+            ],
+            [
+                "Change Of The Guard",
+                [
                     [
                         "If you listen you can hear it",
                         "It's the laughter in the street",
@@ -347,9 +356,10 @@
                         "You're feelin' the change of the guard"
                     ]
                 ]
-            },
-            {
-                "Turn That Heartbeat Over Again": [
+            ],
+            [
+                "Turn That Heartbeat Over Again",
+                [
                     [
                         "With stocking face I bought a gun",
                         "The plan was set the plan was done",
@@ -388,186 +398,234 @@
                         "He's here with me and you"
                     ]
                 ]
-            }
+            ]
         ]
     },
     {
         "album": "Countdown To Ecstasy",
         "year": 1973,
         "songs": [
-            {
-                "Bodhisattva": []
-            },
-            {
-                "Razor Boy": []
-            },
-            {
-                "The Boston Rag": []
-            },
-            {
-                "Your Gold Teeth": []
-            },
-            {
-                "Show Biz Kids": []
-            },
-            {
-                "My Old School": []
-            },
-            {
-                "Pearl Of The Quarter": []
-            },
-            {
-                "King Of The World": []
-            }
+            [
+                "Bodhisattva",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Razor Boy",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "The Boston Rag",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Your Gold Teeth",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Show Biz Kids",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "My Old School",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Pearl Of The Quarter",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "King Of The World",
+                [["UNDER CONSTRUCTION..."]]
+            ]
         ]
     },
     {
         "album": "Pretzel Logic",
         "year": 1974,
         "songs": [
-            {
-                "Rikki Don't Lose That Number": []
-            },
-            {
-                "Night By Night": []
-            },
-            {
-                "Any Major Dude Will Tell You": []
-            },
-            {
-                "Barrytown": []
-            },
-            {
-                "Parker's Band": []
-            },
-            {
-                "Through With Buzz": []
-            },
-            {
-                "Pretzel Logic": []
-            },
-            {
-                "With A Gun": []
-            },
-            {
-                "Charlie Freak": []
-            },
-            {
-                "Monkey In Your Soul": []
-            }
+            [
+                "Rikki Don't Lose That Number",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Night By Night",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Any Major Dude Will Tell You",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Barrytown",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Parker's Band",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Through With Buzz",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Pretzel Logic",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "With A Gun",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Charlie Freak",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Monkey In Your Soul",
+                [["UNDER CONSTRUCTION..."]]
+            ]
         ]
     },
     {
         "album": "Katy Lied",
         "year": 1975,
         "songs": [
-            {
-                "Black Friday": []
-            },
-            {
-                "Bad Sneakers": []
-            },
-            {
-                "Rose Darling": []
-            },
-            {
-                "Daddy Don't Live In That New York City No More": []
-            },
-            {
-                "Doctor Wu": []
-            },
-            {
-                "Everyone's Gone To The Movies": []
-            },
-            {
-                "Your Gold Teeth II": []
-            },
-            {
-                "Chain Lightning": []
-            },
-            {
-                "Any World (That I'm Welcome To)": []
-            },
-            {
-                "Throw Back The Little Ones": []
-            }
+            [
+                "Black Friday",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Bad Sneakers",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Rose Darling",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Daddy Don't Live In That New York City No More",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Doctor Wu",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Everyone's Gone To The Movies",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Your Gold Teeth II",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Chain Lightning",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Any World (That I'm Welcome To)",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Throw Back The Little Ones",
+                [["UNDER CONSTRUCTION..."]]
+            ]
         ]
     },
     {
         "album": "The Royal Scam",
         "year": 1976,
         "songs": [
-            {
-                "Kid Charlemagne": []
-            },
-            {
-                "The Caves Of Altamira": []
-            },
-            {
-                "Don't Take Me Alive": []
-            },
-            {
-                "Sign In Stranger": []
-            },
-            {
-                "The Fez": []
-            },
-            {
-                "Green Earrings": []
-            },
-            {
-                "Haitian Divorce": []
-            },
-            {
-                "Everything You Did": []
-            },
-            {
-                "The Royal Scam": []
-            }
+            [
+                "Kid Charlemagne",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "The Caves Of Altamira",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Don't Take Me Alive",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Sign In Stranger",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "The Fez",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Green Earrings",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Haitian Divorce",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Everything You Did",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "The Royal Scam",
+                [["UNDER CONSTRUCTION..."]]
+            ]
         ]
     },
     {
         "album": "Aja",
         "year": 1977,
         "songs": [
-            {
-                "Black Cow": []
-            },
-            {
-                "Aja": []
-            },
-            {
-                "Deacon Blues": []
-            },
-            {
-                "Peg": []
-            },
-            {
-                "Home At Last": []
-            },
-            {
-                "I Got The News": []
-            },
-            {
-                "Josie": []
-            }
+            [
+                "Black Cow",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Aja",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Deacon Blues",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Peg",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Home At Last",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "I Got The News",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Josie",
+                [["UNDER CONSTRUCTION..."]]
+            ]
         ]
     },
     {
         "album": "Gaucho",
         "year": 1980,
         "songs": [
-            {
-                "Babylon Sisters": []
-            },
-            {
-                "Hey Nineteen": []
-            },
-            {
-                "Glamour Profession": []
-            },
-            {
-                "Gaucho": [
+            [
+                "Babylon Sisters",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Hey Nineteen",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Glamour Profession",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Gaucho",
+                [
                     [
                         "Just when I say",
                         "Boy we can't miss",
@@ -633,82 +691,103 @@
                         "Would you care to explain?"
                     ]
                 ]
-            },
-            {
-                "Time Out Of Mind": []
-            },
-            {
-                "My Rival": []
-            },
-            {
-                "Third World Man": []
-            }
+            ],
+            [
+                "Time Out Of Mind",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "My Rival",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Third World Man",
+                [["UNDER CONSTRUCTION..."]]
+            ]
         ]
     },
     {
         "album": "Two Against Nature",
         "year": 2000,
         "songs": [
-            {
-                "Gaslighting Abbie": []
-            },
-            {
-                "What A Shame About Me": []
-            },
-            {
-                "Two Against Nature": []
-            },
-            {
-                "Janie Runaway": []
-            },
-            {
-                "Almost Gothic": []
-            },
-            {
-                "Jack Of Speed": []
-            },
-            {
-                "Cousin Dupree": []
-            },
-            {
-                "Negative Girl": []
-            },
-            {
-                "West Of Hollywood": []
-            }
+            [
+                "Gaslighting Abbie",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "What A Shame About Me",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Two Against Nature",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Janie Runaway",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Almost Gothic",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Jack Of Speed",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Cousin Dupree",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Negative Girl",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "West Of Hollywood",
+                [["UNDER CONSTRUCTION..."]]
+            ]
         ]
     },
     {
         "album": "Everything Must Go",
         "year": 2003,
         "songs": [
-            {
-                "The Last Mall": []
-            },
-            {
-                "Things I Miss The Most": []
-            },
-            {
-                "Blues Beach": []
-            },
-            {
-                "Godwhacker": []
-            },
-            {
-                "Slang Of Ages": []
-            },
-            {
-                "Green Book": []
-            },
-            {
-                "Pixeleen": []
-            },
-            {
-                "Lunch With Gina": []
-            },
-            {
-                "Everything Must Go": []
-            }
+            [
+                "The Last Mall",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Things I Miss The Most",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Blues Beach",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Godwhacker",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Slang Of Ages",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Green Book",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Pixeleen",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Lunch With Gina",
+                [["UNDER CONSTRUCTION..."]]
+            ],
+            [
+                "Everything Must Go",
+                [["UNDER CONSTRUCTION..."]]
+            ]
         ]
     }
 ]

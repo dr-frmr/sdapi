@@ -2,12 +2,14 @@
     {
         "process_name": "sdapi",
         "process_wasm_path": "/sdapi.wasm",
-        "on_exit": "Restart",
-        "request_networking": true,
+        "on_exit": "None",
+        "request_networking": false,
         "request_messaging": [
-            "net:sys:uqbar"
+            "http_server:sys:uqbar"
         ],
-        "grant_messaging": [],
-        "public": true
+        "grant_messaging": [
+            "http_server:sys:uqbar"
+        ],
+        "public": false
     }
 ]

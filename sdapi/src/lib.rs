@@ -38,15 +38,15 @@ wit_bindgen::generate!({
 call_init!(init);
 
 fn init(our: Address) {
-    print_to_terminal(0, "sdapi: begin");
+    print_to_terminal(0, "SteelyDanAPI: online");
 
     // parse files
-    let songs: Vec<String> = serde_json::from_str(SONGS).unwrap();
-    let lyrics: Vec<Album> = serde_json::from_str(LYRICS).unwrap();
+    let songs: Vec<String> = serde_json::from_str(SONGS).expect("failed to parse songs");
+    let lyrics: Vec<Album> = serde_json::from_str(LYRICS).expect("failed to parse lyrics");
 
     // bind endpoints for public access
-    http::bind_http_path("/song", false, false).unwrap();
-    http::bind_http_path("/lyric", false, false).unwrap();
+    http::bind_http_path("/song", false, false).expect("failed to bind /song");
+    http::bind_http_path("/lyric", false, false).expect("failed to bind /lyric");
 
     loop {
         let Ok(Message::Request { ref ipc, .. }) = await_message() else {
@@ -64,22 +64,28 @@ fn init(our: Address) {
         let seed = &mut rand::thread_rng();
 
         match incoming.path().unwrap_or_default().as_str() {
-            "/song" => {
+            "song" => {
                 // select random song from list
                 http::send_response(
                     http::StatusCode::OK,
-                    None,
+                    Some(HashMap::from([(
+                        "Content-Type".to_string(),
+                        "text/plain".to_string(),
+                    )])),
                     songs.choose(seed).unwrap().as_bytes().to_vec(),
                 );
             }
-            "/lyric" => {
+            "lyric" => {
                 // select random album, random song, then random lyric snippet
                 let album = lyrics.choose(seed).unwrap();
                 let (song_title, lyrics) = album.songs.choose(seed).unwrap();
                 let lyric = lyrics.choose(seed).unwrap();
                 http::send_response(
                     http::StatusCode::OK,
-                    None,
+                    Some(HashMap::from([(
+                        "Content-Type".to_string(),
+                        "application/json".to_string(),
+                    )])),
                     serde_json::to_vec(&Lyric {
                         album: album.album.to_string(),
                         year: album.year,
