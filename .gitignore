@@ -5,3 +5,4 @@ pkg/*.wasm
 *.swo
 */wasi_snapshot_preview1.wasm
 */wit/
+.DS_Store
