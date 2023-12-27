@@ -2,7 +2,7 @@
     {
         "process_name": "sdapi",
         "process_wasm_path": "/sdapi.wasm",
-        "on_exit": "None",
+        "on_exit": "Restart",
         "request_networking": false,
         "request_messaging": [
             "http_server:sys:uqbar"
