@@ -1,9 +1,7 @@
 use rand::seq::SliceRandom;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-use uqbar_process_lib::{
-    await_message, call_init, http, print_to_terminal, Address, Message,
-};
+use uqbar_process_lib::{await_message, call_init, http, println, Address, Message};
 
 // TODO: replace with VFS reads inside init()
 const SONGS: &str = include_str!("../../pkg/songs.json");
@@ -36,7 +34,7 @@ wit_bindgen::generate!({
 call_init!(init);
 
 fn init(_our: Address) {
-    print_to_terminal(0, "SteelyDanAPI: online");
+    println!("SteelyDanAPI: online");
 
     // parse files
     let songs: Vec<String> = serde_json::from_str(SONGS).expect("failed to parse songs");
@@ -63,6 +61,7 @@ fn init(_our: Address) {
 
         match incoming.path().unwrap_or_default().as_str() {
             "song" => {
+                let start = std::time::Instant::now();
                 // select random song from list
                 http::send_response(
                     http::StatusCode::OK,
@@ -71,9 +70,13 @@ fn init(_our: Address) {
                         "text/plain".to_string(),
                     )])),
                     songs.choose(seed).unwrap().as_bytes().to_vec(),
-                ).unwrap();
+                )
+                .unwrap();
+                let end = std::time::Instant::now();
+                println!("SteelyDanAPI: serving /song took {:?}", (end - start));
             }
             "lyric" => {
+                let start = std::time::Instant::now();
                 // select random album, random song, then random lyric snippet
                 let album = lyrics.choose(seed).unwrap();
                 let (song_title, lyrics) = album.songs.choose(seed).unwrap();
@@ -91,14 +94,18 @@ fn init(_our: Address) {
                         lyric: lyric.to_vec(),
                     })
                     .unwrap(),
-                ).unwrap();
+                )
+                .unwrap();
+                let end = std::time::Instant::now();
+                println!("SteelyDanAPI: serving /lyric took {:?}", (end - start));
             }
             _ => {
                 http::send_response(
                     http::StatusCode::NOT_FOUND,
                     None,
                     "404 Not Found".as_bytes().to_vec(),
-                ).unwrap();
+                )
+                .unwrap();
             }
         }
     }
