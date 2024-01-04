@@ -4,6 +4,7 @@ use std::collections::HashMap;
 use uqbar_process_lib::{await_message, call_init, http, println, Address, Message};
 
 // TODO: replace with VFS reads inside init()
+const HOMEPAGE: &[u8] = include_bytes!("../../pkg/index.html");
 const SONGS: &str = include_str!("../../pkg/songs.json");
 const LYRICS: &str = include_str!("../../pkg/lyrics.json");
 
@@ -39,6 +40,16 @@ fn init(_our: Address) {
     // parse files
     let songs: Vec<String> = serde_json::from_str(SONGS).expect("failed to parse songs");
     let lyrics: Vec<Album> = serde_json::from_str(LYRICS).expect("failed to parse lyrics");
+
+    // serve webpage
+    http::bind_http_static_path(
+        "/",
+        false,
+        false,
+        Some("text/html".to_string()),
+        HOMEPAGE.to_vec(),
+    )
+    .expect("failed to bind homepage");
 
     // bind endpoints for public access
     http::bind_http_path("/song", false, false).expect("failed to bind /song");

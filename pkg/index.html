@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .col {
+            flex: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>SteelyDanAPI</h1>
+        <div class="row">
+            <div class="col">
+                <p>Get a song: (GET /song)</p>
+                <form id="song-form" class="col">
+                    <button>GET</button>
+                    <div id="song" style="font-style:italic; font-size:large; font-weight:bold"></div>
+                </form>
+            </div>
+            <div class="col">
+                <p>Get a lyric: (GET /lyric)</p>
+                <form id="lyric-form" class="col">
+                    <button>GET</button>
+                    <div id="lyric-album" style="font-weight:bold"></div>
+                    <div id="lyric-year" style="font-style:italic"></div>
+                    <br>
+                    <div id="lyric-song"></div>
+                    <br>
+                    <div id="lyric-lines" style="font-style:italic"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        async function get_song() {
+            const result = await fetch("/sdapi:sdapi:benjammin.uq/song", {
+                method: "GET",
+                body: null,
+            });
+            document.getElementById("song").innerHTML = await result.text();
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const song_form = document.getElementById("song-form");
+            song_form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                get_song();
+            });
+
+            const lyric_form = document.getElementById("lyric-form");
+            lyric_form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const result = await fetch("/sdapi:sdapi:benjammin.uq/lyric", {
+                    method: "GET",
+                    body: null,
+                });
+                const result_json = await result.json();
+                document.getElementById("lyric-album").innerHTML = result_json["album"];
+                document.getElementById("lyric-year").innerHTML = result_json["year"];
+                document.getElementById("lyric-song").innerHTML = result_json["song"];
+                document.getElementById("lyric-lines").innerHTML = "";
+                for (let i = 0; i < result_json["lyric"].length; i++) {
+                    document.getElementById("lyric-lines").innerHTML += result_json["lyric"][i] + "<br>";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
