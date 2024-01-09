@@ -1,7 +1,7 @@
+use nectar_process_lib::{await_message, call_init, http, println, Address, Message};
 use rand::seq::SliceRandom;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-use uqbar_process_lib::{await_message, call_init, http, println, Address, Message};
 
 // TODO: replace with VFS reads inside init()
 const HOMEPAGE: &[u8] = include_bytes!("../../pkg/index.html");
@@ -56,11 +56,12 @@ fn init(_our: Address) {
     http::bind_http_path("/lyric", false, false).expect("failed to bind /lyric");
 
     loop {
-        let Ok(Message::Request { ref ipc, .. }) = await_message() else {
+        let Ok(Message::Request { ref body, .. }) = await_message() else {
             continue
         };
 
-        let Ok(http::HttpServerRequest::Http(incoming)) = serde_json::from_slice::<http::HttpServerRequest>(ipc) else {
+        let Ok(http::HttpServerRequest::Http(incoming))
+            = serde_json::from_slice::<http::HttpServerRequest>(body) else {
             continue
         };
 
