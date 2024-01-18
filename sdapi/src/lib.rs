@@ -1,4 +1,4 @@
-use nectar_process_lib::{await_message, call_init, http, println, Address, Message};
+use kinode_process_lib::{await_message, call_init, http, println, Address, Message};
 use rand::seq::SliceRandom;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
@@ -65,14 +65,14 @@ fn init(_our: Address) {
             continue
         };
 
-        if incoming.method != "GET" {
+        if incoming.method().unwrap_or_default() != http::Method::GET {
             continue;
         };
 
         let seed = &mut rand::thread_rng();
 
         match incoming.path().unwrap_or_default().as_str() {
-            "song" => {
+            "/song" => {
                 let start = std::time::Instant::now();
                 // select random song from list
                 http::send_response(
@@ -87,7 +87,7 @@ fn init(_our: Address) {
                 let end = std::time::Instant::now();
                 println!("SteelyDanAPI: serving /song took {:?}", (end - start));
             }
-            "lyric" => {
+            "/lyric" => {
                 let start = std::time::Instant::now();
                 // select random album, random song, then random lyric snippet
                 let album = lyrics.choose(seed).unwrap();

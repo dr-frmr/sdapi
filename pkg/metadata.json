@@ -1,5 +1,9 @@
 {
     "package": "sdapi",
-    "publisher": "benjammin.uq",
-    "version": [0, 1, 0]
+    "publisher": "mothu-et-doria.os",
+    "version": [
+        0,
+        2,
+        0
+    ]
 }

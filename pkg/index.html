@@ -42,7 +42,7 @@
     </main>
     <script>
         async function get_song() {
-            const result = await fetch("/sdapi:sdapi:benjammin.uq/song", {
+            const result = await fetch("/sdapi:sdapi:mothu-et-doria.os/song", {
                 method: "GET",
                 body: null,
             });
@@ -61,7 +61,7 @@
             lyric_form.addEventListener("submit", async (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                const result = await fetch("/sdapi:sdapi:benjammin.uq/lyric", {
+                const result = await fetch("/sdapi:sdapi:mothu-et-doria.os/lyric", {
                     method: "GET",
                     body: null,
                 });
