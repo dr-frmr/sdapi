@@ -35,13 +35,11 @@ wit_bindgen::generate!({
 call_init!(init);
 
 fn init(_our: Address) {
-    println!("SteelyDanAPI: online");
-
     // parse files
     let songs: Vec<String> = serde_json::from_str(SONGS).expect("failed to parse songs");
     let lyrics: Vec<Album> = serde_json::from_str(LYRICS).expect("failed to parse lyrics");
 
-    // serve webpage
+    // serve webpage publicly
     http::bind_http_static_path(
         "/",
         false,
@@ -54,6 +52,8 @@ fn init(_our: Address) {
     // bind endpoints for public access
     http::bind_http_path("/song", false, false).expect("failed to bind /song");
     http::bind_http_path("/lyric", false, false).expect("failed to bind /lyric");
+
+    println!("SteelyDanAPI: now online...");
 
     loop {
         let Ok(Message::Request { ref body, .. }) = await_message() else {
@@ -82,8 +82,7 @@ fn init(_our: Address) {
                         "text/plain".to_string(),
                     )])),
                     songs.choose(seed).unwrap().as_bytes().to_vec(),
-                )
-                .unwrap();
+                );
                 let end = std::time::Instant::now();
                 println!("SteelyDanAPI: serving /song took {:?}", (end - start));
             }
@@ -106,19 +105,15 @@ fn init(_our: Address) {
                         lyric: lyric.to_vec(),
                     })
                     .unwrap(),
-                )
-                .unwrap();
+                );
                 let end = std::time::Instant::now();
                 println!("SteelyDanAPI: serving /lyric took {:?}", (end - start));
             }
-            _ => {
-                http::send_response(
-                    http::StatusCode::NOT_FOUND,
-                    None,
-                    "404 Not Found".as_bytes().to_vec(),
-                )
-                .unwrap();
-            }
+            _ => http::send_response(
+                http::StatusCode::NOT_FOUND,
+                None,
+                "404 Not Found".as_bytes().to_vec(),
+            ),
         }
     }
 }
