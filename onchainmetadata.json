@@ -1,6 +1,7 @@
 {
-    "name": "SteelyDanAPI",
-    "subtitle": "A simple app that serves a public API with Steely Dan songs and lyrics",
+    "name": "sdapi",
+    "subtitle": "SteelyDanAPI",
+    "description": "A simple app that serves a public API with Steely Dan songs and lyrics",
     "version": "0.2.1",
     "website": "https://github.com/dr-frmr",
     "mirrors": [
