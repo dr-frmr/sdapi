@@ -1,0 +1,17 @@
+{
+    "name": "SteelyDanAPI",
+    "description": "A simple app that serves a public API with Steely Dan songs and lyrics",
+    "image": "",
+    "properties": {
+        "package_name": "sdapi",
+        "current_version": "0.2.1",
+        "publisher": "mothu-et-doria.os",
+        "mirrors": [
+            "mothu-et-doria.os"
+        ],
+        "code_hashes": {
+            "0.2.1": "1b77632f77a5ec0d1d957662050a77981b3ae977df1fdb7ae6d057b3bdf7fe7b"
+        },
+        "external_url": "https://github.com/dr-frmr"
+    }
+}
